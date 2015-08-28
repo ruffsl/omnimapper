@@ -1,4 +1,4 @@
-FROM cogrob/omnimapper:base
+FROM cogrob/omnimapper:gtsam
 MAINTAINER Cognitive Robotics "http://cogrob.org/"
 
 WORKDIR /root

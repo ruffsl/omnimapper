@@ -1,4 +1,4 @@
-FROM cogrob/omnimapper:apriltags
+FROM cogrob/omnimapper:base
 MAINTAINER Cognitive Robotics "http://cogrob.org/"
 
 WORKDIR /root
@@ -14,7 +14,9 @@ RUN apt-get install -y \
 # clone object_tracking_2d_ros project
 RUN mkdir -p catkin_ws/src \
   && cd catkin_ws/src \
-  && git clone https://github.com/CognitiveRobotics/object_tracking_2d_ros.git
+  && git clone https://github.com/CognitiveRobotics/object_tracking_2d_ros.git \
+  && cd object_tracking_2d_ros \
+  && git checkout ebt_prateek
 
 # build omnimapper ros wrapper
 ADD build.sh catkin_ws/src/apriltags/build.sh
