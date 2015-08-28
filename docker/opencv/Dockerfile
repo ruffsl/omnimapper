@@ -11,5 +11,5 @@ RUN mkdir -p workspace \
   && git checkout 2.4.9 \
   && mkdir build \
   && cd build \
-  && cmake -BUILD_opencv_nonfree="True" .. \
+  && cmake -BUILD_opencv_nonfree="True" cmake -D CMAKE_BUILD_TYPE=RELEASE -D WITH_OPENCL=OFF -D CMAKE_INSTALL_PREFIX=/usr/local .. \
   && make -j$(nproc) install

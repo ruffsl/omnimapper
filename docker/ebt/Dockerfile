@@ -1,4 +1,4 @@
-FROM cogrob/omnimapper:gui
+FROM cogrob/omnimapper:opencv
 MAINTAINER Cognitive Robotics "http://cogrob.org/"
 
 WORKDIR /root
@@ -11,10 +11,10 @@ RUN apt-get install -y \
   liblapack3 \
   libopencv-dev
 
-# clone omnimapper project
+# clone object_tracking_2d_ros project
 RUN mkdir -p catkin_ws/src \
   && cd catkin_ws/src \
-  && git clone https://github.com/CognitiveRobotics/object_tracking_2D.git
+  && git clone https://github.com/CognitiveRobotics/object_tracking_2d_ros.git
 
 # build omnimapper ros wrapper
 ADD build.sh catkin_ws/src/apriltags/build.sh
