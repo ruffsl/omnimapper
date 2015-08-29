@@ -1,4 +1,4 @@
-FROM cogrob/omnimapper:gui
+FROM cogrob/omnimapper:nvidia
 MAINTAINER Cognitive Robotics "http://cogrob.org/"
 
 WORKDIR /root

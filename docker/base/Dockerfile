@@ -1,4 +1,4 @@
-FROM cogrob/omnimapper:apriltags
+FROM cogrob/omnimapper:svo
 MAINTAINER Cognitive Robotics "http://cogrob.org/"
 
 WORKDIR /root

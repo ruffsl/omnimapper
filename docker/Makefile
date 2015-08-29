@@ -13,14 +13,14 @@ build:
 	@docker build --tag=cogrob/omnimapper:dep dep/.
 	@docker build --tag=cogrob/omnimapper:dev dev/.
 	@docker build --tag=cogrob/omnimapper:gui gui/.
+	@( cd nvidia ; bash build.sh)
+	@docker build --tag=cogrob/omnimapper:nvidia nvidia/.
 	@docker build --tag=cogrob/omnimapper:gtsam gtsam/.
 	@docker build --tag=cogrob/omnimapper:opencv opencv/.
 	@docker build --tag=cogrob/omnimapper:apriltags apriltags/.
-	@docker build --tag=cogrob/omnimapper:base base/.
 	@docker build --tag=cogrob/omnimapper:ebt ebt/.
 	@docker build --tag=cogrob/omnimapper:svo svo/.
-	# @( cd nvidia ; bash build.sh)
-	# @docker build --tag=cogrob/omnimapper:nvidia nvidia/.
+	# @docker build --tag=cogrob/omnimapper:base base/.
 
 # pull:
 # 	@docker pull cogrob/omnimapper:dep

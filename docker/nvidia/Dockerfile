@@ -1,4 +1,4 @@
-FROM cogrob/omnimapper:demo
+FROM cogrob/omnimapper:gui
 MAINTAINER Cognitive Robotics "http://cogrob.org/"
 
 RUN apt-get install -y \
