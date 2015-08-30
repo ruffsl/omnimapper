@@ -20,7 +20,7 @@ build:
 	@docker build --tag=cogrob/omnimapper:apriltags apriltags/.
 	@docker build --tag=cogrob/omnimapper:ebt ebt/.
 	@docker build --tag=cogrob/omnimapper:svo svo/.
-	# @docker build --tag=cogrob/omnimapper:base base/.
+	@docker build --tag=cogrob/omnimapper:base base/.
 
 # pull:
 # 	@docker pull cogrob/omnimapper:dep
