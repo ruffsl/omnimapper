@@ -15,8 +15,7 @@ RUN apt-get install -y \
 RUN mkdir -p catkin_ws/src \
   && cd catkin_ws/src \
   && git clone https://github.com/CognitiveRobotics/object_tracking_2d_ros.git \
-  && cd object_tracking_2d_ros \
-  && git checkout ebt_prateek
+  && cd object_tracking_2d_ros
 
 # build omnimapper ros wrapper
 ADD build.sh catkin_ws/src/apriltags/build.sh

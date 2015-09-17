@@ -16,7 +16,8 @@ RUN cd gtsam/ \
 	&& cd build \
 	&& cmake .. \
 	&& make -j$(nproc) \
-	&& make install
+	&& make install \
+	&& ldconfig
 
 	# add patch to system eigen for gtsam
 	COPY HouseholderQR.h /usr/include/eigen3/Eigen/src/QR/HouseholderQR.h

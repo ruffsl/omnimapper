@@ -12,4 +12,6 @@ RUN mkdir -p workspace \
   && mkdir build \
   && cd build \
   && cmake -BUILD_opencv_nonfree="True" cmake -D CMAKE_BUILD_TYPE=RELEASE -D WITH_OPENCL=OFF -D CMAKE_INSTALL_PREFIX=/usr/local .. \
-  && make -j$(nproc) install
+  && make -j$(nproc) \
+  && make install \
+  && ldconfig
