@@ -15,8 +15,7 @@ build:
 	@docker build --tag=cogrob/omnimapper:gui gui/.
 	@docker build --tag=cogrob/omnimapper:gtsam gtsam/.
 	@docker build --tag=cogrob/omnimapper:demo demo/.
-	# @( cd nvidia ; bash build.sh)
-	# @docker build --tag=cogrob/omnimapper:nvidia nvidia/.
+	@docker build --tag=cogrob/omnimapper:nvidia nvidia/.
 
 pull:
 	@docker pull cogrob/omnimapper:dep

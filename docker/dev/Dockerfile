@@ -1,5 +1,4 @@
 FROM cogrob/omnimapper:dep
-MAINTAINER Cognitive Robotics "http://cogrob.org/"
 
 # install build tools
 RUN apt-get install -y \

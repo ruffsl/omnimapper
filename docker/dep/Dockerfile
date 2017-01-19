@@ -1,5 +1,4 @@
 FROM osrf/ros:indigo-desktop-full
-MAINTAINER Cognitive Robotics "http://cogrob.org/"
 
 # install basic CLI tools
 RUN apt-get update && apt-get install -y \

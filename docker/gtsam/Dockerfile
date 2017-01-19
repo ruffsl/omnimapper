@@ -1,11 +1,10 @@
 FROM cogrob/omnimapper:gui
-MAINTAINER Cognitive Robotics "http://cogrob.org/"
 
 WORKDIR /root
 
 # download and unzip gtsam
 ENV GTSAM_VERSION 3.2.1
-RUN wget https://research.cc.gatech.edu/borg/sites/edu.borg/files/downloads/gtsam-${GTSAM_VERSION}.tgz \
+RUN wget --no-check-certificate https://research.cc.gatech.edu/borg/sites/edu.borg/files/downloads/gtsam-${GTSAM_VERSION}.tgz \
 	&& mkdir gtsam \
 	&& tar -xvzf gtsam-${GTSAM_VERSION}.tgz --strip=1 -C gtsam/ \
 	&& rm gtsam-${GTSAM_VERSION}.tgz
