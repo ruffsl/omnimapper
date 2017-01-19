@@ -16,5 +16,5 @@ RUN apt-get install -y \
 # install extra ros libraries
 RUN apt-get install -y \
 	libeigen3-dev \
-	ros-indigo-perception-pcl \
-	ros-indigo-openni2-launch
+	ros-${ROS_DISTRO}-perception-pcl \
+	ros-${ROS_DISTRO}-openni2-launch
