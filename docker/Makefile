@@ -6,6 +6,7 @@ help:
 	@echo ""
 	@echo "   1. make build            - build all cogrob images"
 	@echo "   1. make pull             - pull all cogrob images"
+	@echo "   1. make push             - push all cogrob images"
 	@echo "   1. make clean            - remove all cogrob images"
 	@echo ""
 
@@ -23,7 +24,15 @@ pull:
 	@docker pull cogrob/omnimapper:gui
 	@docker pull cogrob/omnimapper:gtsam
 	@docker pull cogrob/omnimapper:demo
-	# @docker pull cogrob/omnimapper:nvidia
+	@docker pull cogrob/omnimapper:nvidia
+
+push:
+	@docker push cogrob/omnimapper:dep
+	@docker push cogrob/omnimapper:dev
+	@docker push cogrob/omnimapper:gui
+	@docker push cogrob/omnimapper:gtsam
+	@docker push cogrob/omnimapper:demo
+	@docker push cogrob/omnimapper:nvidia
 
 clean:
 	@docker rmi -f cogrob/omnimapper:dep
@@ -31,4 +40,4 @@ clean:
 	@docker rmi -f cogrob/omnimapper:gui
 	@docker rmi -f cogrob/omnimapper:gtsam
 	@docker rmi -f cogrob/omnimapper:demo
-	# @docker rmi -f cogrob/omnimapper:nvidia
+	@docker rmi -f cogrob/omnimapper:nvidia
